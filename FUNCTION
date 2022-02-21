@@ -1,0 +1,197 @@
+##Python Functions #####
+
+
+In Python, a function is a group of related statements that performs a specific task.
+
+Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable.
+
+Furthermore, it avoids repetition and makes the code reusable.
+
+"Keyword def that marks the start of the function header"
+
+Basic Example:
+
+##Example1: We will create function called as greet
+
+def greet:     ## yahan pe greet function ka naam hai
+    print("Hello,Good morning!")
+
+greet()
+
+Output:
+
+Hello,Good morning!
+
+
+###Example 2:
+
+def message():
+	print("Welocme to Python function")
+	print("How are you????")
+
+message()
+
+output:
+
+Welocme to Python function
+How are you????
+
+
+##Example3: We will define function with arguments(name) and can call for multiple times as below###
+
+def greet(name):
+    """
+    This function greets to
+    the person passed in as
+    a parameter
+    """
+    print("Hello,Good morning!!!!",name)
+
+greet('shailesh')
+greet('Ramesh')
+greet('Arun')
+
+
+ ##Output of code:
+
+Hello,Good morning!!!! shailesh
+Hello,Good morning!!!! Ramesh
+Hello,Good morning!!!! Arun
+
+
+
+
+Note: In python, the function definition should always be present before the function call. Otherwise, we will get an error. For example,
+
+# function call
+greet('Paul')
+
+# function definition
+def greet(name):
+    """
+    This function greets to
+    the person passed in as
+    a parameter
+    """
+    print("Hello, " + name + ". Good morning!")
+
+Output of code :
+
+# Error: name 'greet' is not defined
+
+
+
+################################################################################################################################################################################
+
+
+####### Local and Global variable ###########
+
+****************************Global Variables ******************************************************************
+
+In Python, a variable declared outside of the function is known as a global variable.
+This means that a global variable can be accessed inside or outside of the function.
+
+Code1:
+
+x = "shailesh"
+
+def foo():
+    print("x inside:", x)
+
+foo()
+print("x outside:", x)
+
+Output:
+
+x inside: shailesh
+x outside: shailesh
+
+***********************************************Local Variables:  *********************************************
+
+A variable declared inside the function's body or in the local scope is known as a local variable.
+
+CODE 1:
+
+def foo():
+    y = "local"
+    print(y)
+
+foo()
+
+Output:
+Local
+
+CODE2:
+
+  def foo():
+    y = "local"
+
+foo()
+print(y)
+
+Output:  (it throws error because value of y is defined locally , inside the def, which is only valid inside the def scope )
+
+  NameError: name 'y' is not defined
+
+
+***************************************Global and local variables  **************************************************************************************************
+Example 1:
+
+x = 5
+print(x)
+
+def foo():
+    global x
+    x=20
+    data= x * 2
+    print(data)
+
+foo()
+print(x)
+
+
+Output:
+
+5   ----the first print(x) value
+40  ----now it takes value which is allocated in func body , x=20, so 20*2
+20  ---now since we have already mentioned GLOBAL value for x it is taking value as 20, it ignores the global value of x=5.
+
+
+Example 2:
+
+name='Mohan'
+print(name)
+
+def user_data():
+    name='Ram'
+    print(name)
+
+user_data()
+print(name)
+
+
+Output:
+
+Mohan
+Ram
+Mohan
+
+
+Example 3:
+
+name='Mohan'
+print(name)
+
+def user_data():
+    global name
+    name='Ram'
+    print(name)
+
+user_data()
+print(name)
+
+Output:
+
+Mohan
+Ram
+Ram

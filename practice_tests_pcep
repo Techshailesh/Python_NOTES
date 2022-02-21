@@ -1,0 +1,46 @@
+pass is a null statement. It does nothing and is usually used in places where you want to have an empty body (i.e. in if-statements or loops)
+but for syntactic reasons need at least a single instruction.
+
+
+print('i love python'[3])    ---this is right syntax
+output: o (3 rd position)
+
+**
+Python is high level language
+python is an interpeted language
+
+#### learn this bitwise opertor.
+
+How many hash signs (#) will be printed after the following snippet?
+
+val = 1
+while val < 10:
+	print('#')
+	val = val << 1
+
+
+
+Hexadecimal numbers start with 0x, octal numbers with 0o, and binary numbers with 0b. For decimal numbers, you can just enter the value.
+
+full_name = 'i love python so much'
+print(full_name.upper()[-10])
+
+it will make upper case but in reverse order (-10)
+
+output: O
+
+
+***Dictionaries in Python don't work with slices. You can access them by keys, but not using slicing.
+
+***Variables can't start with digits. "and" is a keyword and can't be used as a variable name either.
+
+*** aways focus on == , it should not be = (its wrong)
+
+*** fun([])  is wrong
+
+***** For comparison, Python will translate True into 1, so the comparison will be True.
+
+***var = 1_000
+print(var)
+
+output: 1000

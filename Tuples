@@ -1,0 +1,16 @@
+##########TUPLES in PYTHON #############################################
+
+Tuples are similar as lists , however
+Tuple is Immutable(cannot be changed), whereas Lists are mutable(can be changed)
+
+tuple uses()
+lists uses []
+
+note , () is not manadatory in tuples ,it will accpt value without brackets().
+
+
+## Examples :
+
+list -->>  my_list['ram','shyam',1,2,3]         ---square bracket    --mutable
+
+tuple-->>  my_tuple('ram','shyam',1,2,3)        ---round brackets   --immutable

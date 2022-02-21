@@ -1,0 +1,81 @@
+#####Python Dictionary ####
+
+Python dictionary is an unordered collection of items. Each item of a dictionary has a "KEY/VALUE" pair.
+
+Accessing Elements from Dictionary using keys(), items() and values().
+
+
+my_dict = {'name': 'Jack', 'age': 26, 'location': 'London' }
+
+
+print(my_dict['name'])       ##Here name is key in dictionary my_dict
+# Output: Jack
+
+
+print(my_dict.get('age'))    ## here age is KEY in dictionary my_dict , get can also be used to fetch value
+# Output: 26
+
+
+
+my_dict = {'name': 'Jackie Chain', 'age': 26, 'location': 'London' }
+for x in my_dict.values():
+	print(x)
+
+Output:   ## here we are using VALUES keyword to get values from the (key-pair)
+
+  Jackie Chain
+  26
+  London
+
+
+
+  my_dict = {'name': 'Jackie Chain', 'age': 26, 'location': 'London' }
+  for x,y in my_dict.items():
+  	print(x)
+
+
+Output:  ## here we are using ITEMS function to get key value pairs
+
+name Jackie Chain
+age 26
+location London
+
+
+
+
+
+
+####Changing and Adding Dictionary elements
+
+If the key is already present, then the existing value gets updated.
+ In case the key is not present, a new (key: value) pair is added to the dictionary.
+
+EXAMPLE 1:
+
+ my_dict = {'name': 'Jack', 'age': 26}
+
+# update value
+my_dict['age'] = 27
+
+print(my_dict)
+
+# add item
+my_dict['address'] = 'Downtown'
+
+print(my_dict)
+
+OUTPUT:
+
+{'name': 'Jack', 'age': 27}
+{'name': 'Jack', 'age': 27, 'address': 'Downtown'}
+
+EXAMPLE 2:
+
+dict = {'one': 1, 'two': 2, 'three': 3}
+dict2 = {'one': 1, 'two': 5, 'four': 8}
+dict.update(dict2)
+print(dict)
+
+OUTPUT:
+
+{'one': 1, 'two': 5, 'three': 3, 'four': 8}

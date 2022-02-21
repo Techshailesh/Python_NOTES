@@ -1,0 +1,139 @@
+### LIST data types in python ########  GIT
+
+1) List
+2) tuples
+3) dictionaries
+
+Python lists are one of the most versatile data types that allow us to work with multiple elements at once.
+# list
+name = ['ram','shyam','aam']
+
+Indexing is done, so it it will be counted 0(ram),1(shyam),2(aam)
+
+** Indexing always starts from 0
+
+
+names=['ram','shyam','aam']
+print(names[2])
+
+output:aam
+
+names=['ram','shyam','aam']
+print(names[5])
+
+print(names[5])
+IndexError: list index out of range
+
+
+SLICING##
+
+cities=['london','nyc','india','paris','japan']
+
+cities[0:3]. ---it will take values from 0 to 2 (n-1) , so output ---->>> london,nyc,india
+cities[-5] --it will start from end -->> so output will be japan
+cities[3:10]---> it will start values from index 3 --->>so output will be paris,japan
+
+Delete##
+
+cities=['london','nyc','india','paris','japan']
+del cities [2]
+print(cities)
+
+output:  ['london', 'nyc', 'paris', 'japan']
+
+so we can delete also , note DELETE is not function , its a instruction call.
+
+## HOW TO ADD IN  LISTS###
+
+using APPEND:
+
+cities=['london','nyc','india','paris','japan']
+cities.append("canada")
+print(cities)
+
+
+output:  ['london', 'nyc', 'india', 'paris', 'japan', 'canada']
+
+
+******USING INSERT: ( to add in specicific indexing like add at position 2)
+
+
+SYNTAX:   list.insert(index, element)
+
+Example 1:
+
+cities=['london','nyc','india','paris','japan']
+cities.insert(2,"canada")
+print(cities)
+
+
+output: ['london', 'nyc', 'canada', 'india', 'paris', 'japan']
+
+Example 2:
+
+numbers = [0, 1, 2]
+numbers.insert(0, 1)
+print(numbers)
+
+Output:
+
+[1, 0, 1, 2]
+
+
+## Iterations in list --
+
+cities=['london','nyc','india','paris','japan']
+print("delhi" in cities)
+
+output: false
+
+cities=['london','nyc','india','paris','japan']
+print("london" in cities)
+
+Output: True
+
+## changing list position or sorting list
+
+cities=['london','nyc','india','paris','japan']
+print(cities)
+cities[0],cities[3]=cities[3],cities[0]
+print(cities)
+
+output:
+
+['london', 'nyc', 'india', 'paris', 'japan']
+['paris', 'nyc', 'india', 'london', 'japan']
+
+Sort vs sorted: (we can also do sorting for number and strigs)
+
+Sort cannot be reverted
+sorted can be reverted .
+
+
+#Copying the list using slice method###
+
+When we want to keep the old values also and want to get new values
+
+#old list
+list1=['cat',1,5.5,'mouse']
+#copy list using slicing
+list2=list1[:]
+#adding an element to new list2
+list2.append('dog')
+#print both the list
+print(list1)
+print(list2)
+
+output:
+['cat', 1, 5.5, 'mouse']
+['cat', 1, 5.5, 'mouse', 'dog']
+
+## List comprehension #####
+numbers=[i for i in range (1,101)]
+print(numbers)
+
+numbers=[i for i in range (1,101) if i % 3 !=0]
+print(numbers)
+
+
+**so basically it is easy way of using "for " loop , heavily used.

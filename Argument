@@ -1,0 +1,87 @@
+### WITH ARGUMENT ################
+code1:
+
+a=float(input("Enter 1st number: "))
+b=float(input("Enter 2 nd number: "))
+
+
+def add(a,b):
+	c=a+b
+	print("Values for sum is ", c)
+add(a,b)
+
+Output:
+
+Enter 1st number: 15.5
+Enter 2 nd number: 10
+Values for sum is  25.5
+
+
+Now lets pass the value direct , not asking user input
+####CODE 2:######
+
+def add(a,b):
+	c=a+b
+	print("Values for sum is ", c)
+
+add(10.777,20.555)
+add(34,44)
+
+Output:
+
+Values for sum is  31.332
+Values for sum is  78
+
+####CODE 3:  (now here notice that it is not mandatory that what variables we mention in function body should be same when we call function , so (a,b,c=x,y,z)
+
+x=float(input("Enter 1st number: "))
+y=float(input("Enter 2 nd number: "))
+z=float(input("Enter 3 nd number: "))
+
+
+##Function body
+def add(a,b,c):
+	sum=a+b+c
+	print("Values for sum is ", sum)
+
+## function call
+add(x,y,z)
+
+Output:
+
+Enter 1st number: 4
+Enter 2 nd number: 5
+Enter 3 nd number: 6
+Values for sum is  15.0
+
+
+####CODE 4 :    (Similar as above , but when we call add function as (g,h,i), it will fail to map (a,b,c) , beacuse we have not giving input for g,h,i )
+
+x=float(input("Enter 1st number: "))
+y=float(input("Enter 2 nd number: "))
+z=float(input("Enter 3 nd number: "))
+
+
+##Function body
+def add(a,b,c):
+	sum=a+b+c
+	print("Values for sum is ", sum)
+
+## function call
+add(x,y,z)
+add(g,h,i)
+
+
+
+Output:
+
+
+Enter 1st number: 45
+Enter 2 nd number: 10.5
+Enter 3 nd number: 3
+Values for sum is  58.5
+
+Traceback (most recent call last):      ####Error , as values are not defined for g,h,i
+  File "/Users/shaileshsingh/PycharmProjects/pythonProject/main.py", line 13, in <module>
+    add(g,h,i)
+NameError: name 'g' is not defined

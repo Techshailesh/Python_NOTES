@@ -1,0 +1,49 @@
+###########None ############
+
+None is a special constant in Python that represents the absence of a value or a null value. It is an object of its own datatype, the NoneType
+
+None in python means no value is assosciated with variable.
+
+x=10
+print(type(x))
+
+output will show as integer type :   <class 'int'>
+
+
+y=None
+print(type(y))
+
+output will show as integer type:   <class 'NoneType'>
+
+
+
+
+
+CODE 1:
+
+x=10
+print(x)
+y=print(x)
+print(y)
+
+output:
+
+10  --1 st output
+10
+None
+
+
+CODE 2:
+
+def welcome():
+    mesg=("Hi!!!")
+    print(mesg)
+
+
+x=welcome()
+print(x)
+
+output:
+
+Hi!!!
+None
