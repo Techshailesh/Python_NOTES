@@ -1,6 +1,6 @@
 ##########TUPLES in PYTHON #############################################
 
-Tuples are similar as lists , however
+Tuples are similar to lists , however
 Tuple is Immutable(cannot be changed), whereas Lists are mutable(can be changed)
 
 tuple uses()
